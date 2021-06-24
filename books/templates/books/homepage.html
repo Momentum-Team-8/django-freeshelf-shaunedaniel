@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+<div class="flex-grow pa3 flex items-center">
+  {% if user.is_authenticated %}
+  <p>Howdy, {{ user.username }}!</p>
+
+  <h2>Freeshelf: Books</h2>
+  <a href="{% url 'book_list' %}" class="">Books</a>
+  {% else %}
+  <p>Please login</p>
+  <a href="{% url 'auth_login' %}" class="">Login</a>
+  {% endif %}
+</div>
+{% endblock content %}
