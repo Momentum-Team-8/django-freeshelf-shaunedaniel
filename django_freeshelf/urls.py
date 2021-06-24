@@ -7,6 +7,6 @@ urlpatterns = [
     path('', books_views.homepage, name='home'),
     path('accounts/', include('registration.backends.simple.urls')),
     path('books/', books_views.book_list, name='book_list'),
-    path("categ/<slug:slug>", books_views.show_categ, name="show_categ"),
+    path("categ/<slug:slug>", books_views.show_category, name="show_category"),
     path("admin/", admin.site.urls),
 ]
